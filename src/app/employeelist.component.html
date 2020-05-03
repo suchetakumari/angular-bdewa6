@@ -1,0 +1,30 @@
+<employee-count [all]= 'getAllEmployees()' [male]= 'getMaleEmployees()' [female]= 'getFemaleEmployees()' (countRadioButtonSelectionchanged)='onEmployeecountradiobuttonchanged($event)'></employee-count>
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+     <th>Name</th>
+      <th>Salary</th>
+      <th>Gender</th>
+      </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor = 'let employee of employees'>
+    <tr *ngIf= "selectedEmployeeCountRadiobutton === 'All' || selectedEmployeeCountRadiobutton === employee.gender">
+      <td>
+        <a [routerLink]="['/employees',employee.id]">
+        {{employee.id | uppercase}}
+        </a>
+        </td>
+      <td>{{employee.name | employeeTitle : employee.gender}}</td>
+      <td>{{employee.salary}}</td>
+      <td>{{employee.gender}}</td>
+      </tr>
+      </ng-container>
+  </tbody>
+</table>
+
+<div>
+    Colour Preference:
+    <input type="text" [(ngModel)]="colour" [style.background]="colour">
+    </div>

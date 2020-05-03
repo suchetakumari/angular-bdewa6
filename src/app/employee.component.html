@@ -1,0 +1,30 @@
+<table *ngIf="employee">
+  <thead>
+    <tr>
+      <th colspan="2">
+    Employee Details
+    </th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Employee code</td>
+        <td>{{employee.id}</td>}
+      </tr>
+      <tr>
+        <td>Employee name</td>
+        <td>{{employee.name}</td>}
+      </tr>
+      <tr>
+        <td>Employee salary</td>
+        <td>{{employee.salary}</td>}
+      </tr>
+      <tr>
+        <td>Employee gender</td>
+        <td>{{employee.gender}</td>}
+      </tr>
+      </tbody>
+  </table>
+  <div *ngIf="!employee">
+    {{statusMessage}}
+    </div>
