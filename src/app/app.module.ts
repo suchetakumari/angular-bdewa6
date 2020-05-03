@@ -15,6 +15,7 @@ import { HomeComponent} from './home/home.component';
 import { PageNotfoundComponent} from './Others/pagenotfound.component';
 import {EmployeeComponent} from './employee.component';
 import { UserPreferenceService} from './userpreference.service';
+import { FilterPipe} from './filter.pipe';
 
 const appRoutes:Routes =[
 {path:'home', component: HomeComponent},
