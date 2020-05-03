@@ -12,6 +12,12 @@ import { Component } from '@angular/core';
                 <li><a routerLink="home">Home</a></li>
                 <li><a routerLink="employees">Employees</a></li>
             </ul> 
+            <input [(ngModel)]="searchText" placeholder="search text goes here">
+<ul>
+  <li *ngFor="let c of characters | filter : searchText">
+    {{c}}
+  </li>
+</ul>
             <router-outlet></router-outlet>   
   `,
   styleUrls: [ './app.component.css' ]
@@ -19,4 +25,12 @@ import { Component } from '@angular/core';
 export class AppComponent  {
   name = 'Angular';
   userText="ParagimTech";
+  characters = [
+    'Finn the human',
+    'Jake the dog',
+    'Princess bubblegum',
+    'Lumpy Space Princess',
+    'Beemo1',
+    'Beemo2'
+  ]
 }

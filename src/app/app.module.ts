@@ -27,7 +27,7 @@ const appRoutes:Routes =[
 ]
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpModule, RouterModule.forRoot(appRoutes, {useHash:true}) ],
-  declarations: [ AppComponent, HelloComponent, EmployeeListComponent, EmployeeTitlePipe, EmployeeCountComponent, SimpleComponent, HomeComponent, PageNotfoundComponent, EmployeeComponent ],
+  declarations: [ AppComponent, HelloComponent, EmployeeListComponent, EmployeeTitlePipe, EmployeeCountComponent, SimpleComponent, HomeComponent, PageNotfoundComponent, EmployeeComponent,FilterPipe ],
   bootstrap:    [ AppComponent ],
   providers: [EmployeeService, UserPreferenceService]
 })
