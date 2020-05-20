@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
   // Your text <input type="text" [(ngModel)]="userText">
   // <simple [simpleInput]="userText"></simple>`,
   template: `
+  <div testDirective>Hi There!!</div>
          <div style="padding:5px"> </div>
             <ul class="nav nav-tabs">
                 <li><a routerLink="home">Home</a></li>
