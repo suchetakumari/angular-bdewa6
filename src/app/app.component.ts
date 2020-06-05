@@ -22,13 +22,15 @@ import { EmployeeListComponent } from './employeelist.component';
 </ul>
 
 <employee-list >
-<h1 #header>Welcome</h1>
+// content child code
+<h1 #header1>Welcome</h1>
 </employee-list>
             <router-outlet></router-outlet>   
   `,
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent implements  AfterViewInit{
+  // view child code
   @ViewChild(EmployeeListComponent,{static:false}) employeeListComponent:EmployeeListComponent;
   name = 'Angular';
   userText="ParagimTech";
@@ -40,6 +42,7 @@ export class AppComponent implements  AfterViewInit{
     'Beemo1',
     'Beemo2'
   ]
+    // view child code
   ngAfterViewInit(){
     console.log(this.employeeListComponent.viewChildComponent1());
   }
