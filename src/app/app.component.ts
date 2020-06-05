@@ -20,7 +20,10 @@ import { EmployeeListComponent } from './employeelist.component';
     {{c}}
   </li>
 </ul>
-<employee-list></employee-list>
+
+<employee-list >
+<h1 #header>Welcome</h1>
+</employee-list>
             <router-outlet></router-outlet>   
   `,
   styleUrls: [ './app.component.css' ]

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit,ContentChild} from '@angular/core';
 import {IEmployee} from './employee';
 import { EmployeeService} from './employee.service';
 import { UserPreferenceService} from './userpreference.service';
@@ -8,6 +8,7 @@ import { UserPreferenceService} from './userpreference.service';
    templateUrl: 'employeelist.component.html',
 })
 export class EmployeeListComponent implements OnInit{
+  @ContentChild('header',{static:false}) headerElm;
 employees: IEmployee[] ;
   selectedEmployeeCountRadiobutton: string = 'All';
 
@@ -34,6 +35,7 @@ set colour(value: string){
 // }
 ngOnInit(){
   // this.employees = this.employeeService.getEmployees();
+console.log(this.headerElm);
 
 }
   getAllEmployees() {
