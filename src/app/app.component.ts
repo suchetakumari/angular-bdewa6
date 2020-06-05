@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component ,ViewChild,AfterViewInit} from '@angular/core';
+import { EmployeeListComponent } from './employeelist.component';
 
 @Component({
   selector: 'my-app',
@@ -19,11 +20,13 @@ import { Component } from '@angular/core';
     {{c}}
   </li>
 </ul>
+<employee-list></employee-list>
             <router-outlet></router-outlet>   
   `,
   styleUrls: [ './app.component.css' ]
 })
-export class AppComponent  {
+export class AppComponent implements  AfterViewInit{
+  @ViewChild(EmployeeListComponent,{static:false}) employeeListComponent:EmployeeListComponent;
   name = 'Angular';
   userText="ParagimTech";
   characters = [
@@ -34,4 +37,7 @@ export class AppComponent  {
     'Beemo1',
     'Beemo2'
   ]
+  ngAfterViewInit(){
+    console.log(this.employeeListComponent.viewChildComponent1());
+  }
 }

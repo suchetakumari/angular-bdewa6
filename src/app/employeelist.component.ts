@@ -48,4 +48,8 @@ ngOnInit(){
 onEmployeecountradiobuttonchanged(selectedRadiobuttonvalue){
   this.selectedEmployeeCountRadiobutton = selectedRadiobuttonvalue
 }
+
+viewChildComponent1(){
+  console.log("Hello");
+}
 }
