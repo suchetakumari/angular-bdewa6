@@ -27,6 +27,10 @@ import { EmployeeListComponent } from './employeelist.component';
 </employee-list>
 <h2 *myCustomIf="condition">Hello {{name}}</h2>
              <button (click)="condition = !condition">Click</button>
+
+             <h2>Counter:{{counter}}</h2>
+<button (click)="clickCounter()">Click. Me</button>
+
             <router-outlet></router-outlet>   
   `,
   styleUrls: [ './app.component.css' ]
@@ -37,6 +41,7 @@ export class AppComponent implements  AfterViewInit{
   name = 'Angular';
   userText="ParagimTech";
   condition:boolean=false;
+  counter:number=0;
   characters = [
     'Finn the human',
     'Jake the dog',
@@ -46,8 +51,13 @@ export class AppComponent implements  AfterViewInit{
     'Beemo2',
     'Hello'
   ]
+  
     // view child code
   ngAfterViewInit(){
     console.log(this.employeeListComponent.viewChildComponent1());
   }
+clickCounter(){
+return this.counter+=1;
+}
+
 }
