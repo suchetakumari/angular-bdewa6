@@ -16,7 +16,8 @@ import { PageNotfoundComponent} from './Others/pagenotfound.component';
 import {EmployeeComponent} from './employee.component';
 import { UserPreferenceService} from './userpreference.service';
 import { FilterPipe} from './filter.pipe';
-import {TestDirectiveComponent} from './test.directive'
+import {TestDirectiveComponent} from './test.directive';
+import {MyCustomIfDirective} from './template-directive'
 const appRoutes:Routes =[
 {path:'home', component: HomeComponent},
 {path:'employees', component:EmployeeListComponent},
@@ -27,7 +28,7 @@ const appRoutes:Routes =[
 ]
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpModule, RouterModule.forRoot(appRoutes, {useHash:true}) ],
-  declarations: [ AppComponent, HelloComponent, EmployeeListComponent, EmployeeTitlePipe, EmployeeCountComponent, SimpleComponent, HomeComponent, PageNotfoundComponent, EmployeeComponent,FilterPipe,TestDirectiveComponent ],
+  declarations: [ AppComponent, HelloComponent, EmployeeListComponent, EmployeeTitlePipe, EmployeeCountComponent, SimpleComponent, HomeComponent, PageNotfoundComponent, EmployeeComponent,FilterPipe,TestDirectiveComponent, MyCustomIfDirective ],
   bootstrap:    [ AppComponent ],
   providers: [EmployeeService, UserPreferenceService]
 })

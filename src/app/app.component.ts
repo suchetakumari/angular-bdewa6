@@ -25,6 +25,8 @@ import { EmployeeListComponent } from './employeelist.component';
 // content child code
 <h1 #header1>Welcome</h1>
 </employee-list>
+<h2 *myCustomIf="condition">Hello {{name}}</h2>
+             <button (click)="condition = !condition">Click</button>
             <router-outlet></router-outlet>   
   `,
   styleUrls: [ './app.component.css' ]
@@ -34,13 +36,15 @@ export class AppComponent implements  AfterViewInit{
   @ViewChild(EmployeeListComponent,{static:false}) employeeListComponent:EmployeeListComponent;
   name = 'Angular';
   userText="ParagimTech";
+  condition:boolean=false;
   characters = [
     'Finn the human',
     'Jake the dog',
     'Princess bubblegum',
     'Lumpy Space Princess',
     'Beemo1',
-    'Beemo2'
+    'Beemo2',
+    'Hello'
   ]
     // view child code
   ngAfterViewInit(){
