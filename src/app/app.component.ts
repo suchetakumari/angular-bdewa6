@@ -2,6 +2,14 @@ import { Component ,ViewChild,AfterViewInit} from '@angular/core';
 import { EmployeeListComponent } from './employeelist.component';
 import {ModalDirective} from 'angular-bootstrap-md';
 import {FormControl} from '@angular/forms';
+
+export interface Schedule {
+  id?: string;
+  time: string;
+  subject: string;
+  location?: string;
+  description?: string;
+}
 @Component({
   selector: 'my-app',
   // template: ` <employee-list></employee-list><br>
@@ -37,13 +45,6 @@ import {FormControl} from '@angular/forms';
   templateUrl:  './app.component.html',
   styleUrls: [ './app.component.css' ]
 })
-export interface Schedule {
-  id?: string;
-  time: string;
-  subject: string;
-  location?: string;
-  description?: string;
-}
 
 export class AppComponent implements  AfterViewInit{
   // view child code
