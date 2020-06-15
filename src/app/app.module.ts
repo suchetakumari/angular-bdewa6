@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 import { AppComponent } from './app.component';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { RouterModule,Routes } from '@angular/router';
 
 import { HttpModule } from '@angular/http';
@@ -20,7 +22,7 @@ import {TestDirectiveComponent} from './test.directive';
 import {MyCustomIfDirective} from './template-directive';
 import {ScheduleItemComponent} from './schedule-item.component';
 import {MDBBootstrapModule} from 'angular-bootstrap-md';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 
 const appRoutes:Routes =[
 {path:'home', component: HomeComponent},
@@ -31,9 +33,10 @@ const appRoutes:Routes =[
 
 ]
 @NgModule({
-  imports:      [ BrowserModule, BrowserAnimationsModule,FormsModule, ReactiveFormsModule,HttpModule, RouterModule.forRoot(appRoutes, {useHash:true}),MDBBootstrapModule.forRoot() ],
-  declarations: [ AppComponent, HelloComponent, EmployeeListComponent, EmployeeTitlePipe, EmployeeCountComponent, SimpleComponent, HomeComponent, PageNotfoundComponent, EmployeeComponent,FilterPipe,TestDirectiveComponent, MyCustomIfDirective,ScheduleItemComponent],
+  imports:      [ FormsModule,ReactiveFormsModule,BrowserModule, BrowserAnimationsModule,HttpModule, RouterModule.forRoot(appRoutes, {useHash:true}),MDBBootstrapModule.forRoot() ],
+  declarations: [ AppComponent, HelloComponent, EmployeeListComponent, EmployeeTitlePipe, EmployeeCountComponent, SimpleComponent, HomeComponent, PageNotfoundComponent, EmployeeComponent,FilterPipe, MyCustomIfDirective,ScheduleItemComponent],
   bootstrap:    [ AppComponent ],
-  providers: [EmployeeService, UserPreferenceService]
+  providers: [EmployeeService, UserPreferenceService,
+  ]
 })
 export class AppModule { }

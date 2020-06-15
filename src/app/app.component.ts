@@ -16,33 +16,33 @@ export interface Schedule {
 
   // Your text <input type="text" [(ngModel)]="userText">
   // <simple [simpleInput]="userText"></simple>`,
-//   template: `
-//   <div testDirective>Hi There!!</div>
-//          <div style="padding:5px"> </div>
-//             <ul class="nav nav-tabs">
-//                 <li><a routerLink="home">Home</a></li>
-//                 <li><a routerLink="employees">Employees</a></li>
-//             </ul> 
-//             <input [(ngModel)]="searchText" placeholder="search text goes here">
-// <ul>
-//   <li *ngFor="let c of characters | filter : searchText">
-//     {{c}}
-//   </li>
-// </ul>
+  template: `
+  <div testDirective>Hi There!!</div>
+         <div style="padding:5px"> </div>
+            <ul class="nav nav-tabs">
+                <li><a routerLink="home">Home</a></li>
+                <li><a routerLink="employees">Employees</a></li>
+            </ul> 
+            <input [(ngModel)]="searchText" placeholder="search text goes here">
+<ul>
+  <li *ngFor="let c of characters | filter : searchText">
+    {{c}}
+  </li>
+</ul>
 
-// <employee-list >
-// // content child code
-// <h1 #header1>Welcome</h1>
-// </employee-list>
-// <h2 *myCustomIf="condition">Hello {{name}}</h2>
-//              <button (click)="condition = !condition">Click</button>
+<employee-list >
+// content child code
+<h1 #header1>Welcome</h1>
+</employee-list>
+<h2 *myCustomIf="condition">Hello {{name}}</h2>
+             <button (click)="condition = !condition">Click</button>
 
-//              <h2>Counter:{{counter}}</h2>
-// <button (click)="clickCounter()">Click. Me</button>
+             <h2>Counter:{{counter}}</h2>
+<button (click)="clickCounter()">Click. Me</button>
 
-//             <router-outlet></router-outlet>   
-//   `,
-  templateUrl:  './app.component.html',
+            <router-outlet></router-outlet>   
+  `,
+  // templateUrl:  './app.component.html',
   styleUrls: [ './app.component.css' ]
 })
 
